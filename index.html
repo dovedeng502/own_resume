@@ -1,367 +1,781 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dove Deng - 职业简历演示</title>
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#0c0b0a">
+<title>资深运营专家 · 8年互联网产运经验 | Operation Expert Resume</title>
+<meta name="description" content="资深运营专家在线简历。8年互联网产运经验，腾讯音乐娱乐集团韩语区运营负责人，专注营收增长、活动运营、PGC生态建设、数据驱动决策。">
+<meta name="keywords" content="运营简历,产品运营,营收运营,活动运营,腾讯音乐,TME,YY,Pokekara,MiSing,数据分析,团队管理">
+<meta name="author" content="Operation Expert">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="资深运营专家 · 在线简历">
+<meta property="og:description" content="8年互联网产运经验 · 腾讯音乐韩语区运营负责人 · 营收增长 · 活动运营 · 数据驱动">
+<meta property="og:image" content="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:url" content="https://github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="资深运营专家 · 在线简历">
+<meta name="twitter:description" content="8年互联网产运经验，腾讯音乐韩语区运营负责人">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?auto=format&fit=crop&w=1200&q=80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root[data-theme="dark"]{
+  --bg-0:#0c0b0a;--bg-1:#121110;--bg-2:#1a1816;
+  --fg-0:#f1ede8;--fg-1:#a8a39c;--fg-2:#6c6862;
+  --line:#221f1c;--line-strong:#2c2926;
+  --accent:#ff5b3e;
+  --accent-ink:#0c0b0a;
+  --surface:#121110;--surface-border:#26221f;
+}
+:root[data-theme="light"]{
+  --bg-0:#f5f1ea;--bg-1:#fbf8f2;--bg-2:#ede8df;
+  --fg-0:#1a1612;--fg-1:#5a544c;--fg-2:#8a847a;
+  --line:#e2dccf;--line-strong:#cdc6b6;
+  --accent:#c8401e;
+  --accent-ink:#fbf8f2;
+  --surface:#fbf8f2;--surface-border:#e2dccf;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'PingFang SC','Hiragino Sans GB','Microsoft Yahei',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg-0);color:var(--fg-0);line-height:1.7;overflow-x:hidden;
+  transition:background .4s ease,color .4s ease;
+}
+::selection{background:var(--accent);color:var(--accent-ink)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700;800;900&family=IBM+Plex+Mono:wght@300;400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+/* ============ CANVAS BG ============ */
+/* particle background removed — minimalist */
 
-    <style>
-      :root {
-        --c-bg: #1c1c1c;
-        --c-bg-alt: #242422;
-        --c-bg-light: #f5d200;
-        --c-bg-light-alt: #f0cc00;
-        --c-fg: #f5d200;
-        --c-fg-2: rgba(245, 210, 0, 0.58);
-        --c-fg-3: rgba(245, 210, 0, 0.32);
-        --c-fg-light: #1c1c1c;
-        --c-fg-light-2: rgba(28, 28, 28, 0.62);
-        --c-fg-light-3: rgba(28, 28, 28, 0.35);
-        --c-accent: #f5d200;
-        --c-border: #2e2e2c;
-        --c-border-light: rgba(28, 28, 28, 0.18);
-        --f-display: "Barlow", "Noto Sans SC", sans-serif;
-        --f-heading: "Barlow", "Noto Sans SC", sans-serif;
-        --f-body: "Barlow", "Noto Sans SC", system-ui, sans-serif;
-        --f-mono: "IBM Plex Mono", monospace;
-        --sz-display: 8vw;
-        --sz-h1: 6vw;
-        --sz-h2: 3.5vw;
-        --sz-h3: 2vw;
-        --sz-lead: 1.5vw;
-        --sz-body: 1.1vw;
-        --sz-caption: 0.8vw;
-        --sz-label: 0.7vw;
-        --pad-x: 5vw;
-        --pad-y: 5vh;
-        --gap-lg: 3.5vh;
-        --gap-md: 2vh;
-        --gap-sm: 1vh;
-        --ease-slide: cubic-bezier(0.77, 0, 0.175, 1);
-        --dur-slide: 0.75s;
-        --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
-        --dur-enter: 0.5s;
-      }
+/* ============ NAV ============ */
+.nav{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:50;
+  display:flex;align-items:center;gap:4px;padding:6px;
+  background:var(--surface);border:1px solid var(--surface-border);border-radius:999px;
+}
+.nav a{
+  font-size:13px;color:var(--fg-1);padding:8px 14px;border-radius:999px;
+  transition:color .2s ease,background .2s ease;white-space:nowrap;
+}
+.nav a:hover{color:var(--fg-0)}
+.nav a.active{color:var(--accent-ink);background:var(--accent)}
+.theme-toggle{
+  width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:transparent;border:1px solid var(--surface-border);transition:border-color .2s;
+}
+.theme-toggle:hover{border-color:var(--fg-1)}
+.theme-toggle svg{width:16px;height:16px;stroke:var(--fg-0)}
+[data-theme="dark"] .icon-sun,[data-theme="light"] .icon-moon{display:none}
 
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html, body { width: 100%; height: 100%; overflow: hidden; background: var(--c-bg); -webkit-font-smoothing: antialiased; }
-      #deck { display: flex; height: 100vh; transition: transform var(--dur-slide) var(--ease-slide); will-change: transform; }
-      .slide { flex: 0 0 100vw; width: 100vw; height: 100vh; position: relative; padding: var(--pad-y) var(--pad-x); display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
-      .slide-body { min-height: 0; }
-      .slide.dark { background: var(--c-bg); color: var(--c-fg); }
-      .slide.light { background: var(--c-bg-light); color: var(--c-fg-light); }
-      [data-anim] { opacity: 0; }
-      .slide.is-active [data-anim] { animation-duration: var(--dur-enter); animation-timing-function: var(--ease-enter); animation-fill-mode: forwards; }
-      .slide.is-active [data-anim="fade-up"] { animation-name: kFadeUp; }
-      .slide.is-active [data-anim="fade-in"] { animation-name: kFadeIn; }
-      @keyframes kFadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-      @keyframes kFadeIn { from { opacity: 0; } to { opacity: 1; } }
-      [data-delay="0"] { animation-delay: 0s; }
-      [data-delay="1"] { animation-delay: 0.1s; }
-      [data-delay="2"] { animation-delay: 0.2s; }
-      [data-delay="3"] { animation-delay: 0.3s; }
-      #nav-dots { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 7px; z-index: 100; }
-      .nav-dot { width: 6px; height: 6px; border-radius: 50%; border: none; background: rgba(255, 255, 255, 0.2); cursor: pointer; transition: all 0.3s; padding: 0; }
-      .nav-dot.is-active { background: var(--c-fg); transform: scale(1.4); }
-      .display { font-size: var(--sz-display); font-weight: 900; line-height: 0.9; text-transform: uppercase; font-family: var(--f-display); }
-      .h1 { font-size: var(--sz-h1); font-weight: 900; line-height: 0.92; text-transform: uppercase; font-family: var(--f-heading); }
-      .h2 { font-size: var(--sz-h2); font-weight: 900; line-height: 0.95; text-transform: uppercase; font-family: var(--f-heading); }
-      .h3 { font-size: var(--sz-h3); font-weight: 700; line-height: 1.1; text-transform: uppercase; font-family: var(--f-heading); }
-      .lead { font-size: var(--sz-lead); font-weight: 500; line-height: 1.45; font-family: var(--f-body); }
-      .body { font-size: var(--sz-body); font-weight: 400; line-height: 1.6; font-family: var(--f-body); }
-      .label { font-size: var(--sz-label); font-weight: 500; letter-spacing: 0.06em; font-family: var(--f-mono); }
-      .bullet-list { list-style: none; display: flex; flex-direction: column; gap: var(--gap-sm); padding-left: 1.2em; font-size: var(--sz-body); }
-      .bullet-list li::before { content: "\2014"; margin-left: -1.2em; margin-right: 0.6em; color: var(--c-accent); }
-      .light .bullet-list li::before { color: var(--c-fg-light); }
-      .slide-chrome, .slide-foot { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--c-border); padding-bottom: var(--gap-sm); margin-bottom: var(--gap-md); }
-      .slide-foot { border-bottom: none; border-top: 1px solid var(--c-border); padding-top: var(--gap-sm); margin-top: var(--gap-md); padding-bottom: 0; margin-bottom: 0; }
-      .light .slide-chrome, .light .slide-foot { border-color: var(--c-border-light); }
-      .slide--cover, .slide--chapter, .slide--statement { display: flex; flex-direction: column; justify-content: flex-end; }
-      .slide--cover { justify-content: space-between; padding: 0; }
-      .cover-type { padding: var(--pad-y) var(--pad-x); flex: 1; display: flex; align-items: center; }
-      .cover-meta { padding: var(--gap-md) var(--pad-x) var(--pad-y); display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 1px solid rgba(245, 210, 0, 0.2); }
-      .cover-meta-col { font-family: var(--f-mono); font-size: var(--sz-caption); color: var(--c-fg-2); }
-      .slide--split .slide-body { display: grid; grid-template-columns: 1fr 1fr; gap: var(--pad-x); align-items: center; }
-      .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-md); }
-      .stat-card { border-top: 2px solid var(--c-fg-3); padding-top: var(--gap-md); }
-      .stat-value { font-family: var(--f-display); font-size: 4vw; font-weight: 900; line-height: 1; color: var(--c-fg); }
-      .stat-label { font-size: var(--sz-body); font-weight: 500; margin-top: 5px; }
-      .keyboard-hint { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); font-family: var(--f-mono); font-size: 10px; color: var(--c-fg-3); z-index: 100; pointer-events: none; }
-    </style>
-  </head>
-  <body>
-    <nav id="nav-dots"></nav>
-    <div class="keyboard-hint">使用方向键或空格键翻页</div>
+.menu-btn{display:none;width:34px;height:34px;border-radius:50%;background:transparent;border:1px solid var(--surface-border);align-items:center;justify-content:center}
+.menu-btn span{display:block;width:16px;height:1.5px;background:var(--fg-0);position:relative;transition:.3s}
+.menu-btn span::before,.menu-btn span::after{content:'';position:absolute;left:0;width:16px;height:1.5px;background:var(--fg-0);transition:.3s}
+.menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
 
-    <div id="deck">
-      <!-- SLIDE 1: COVER -->
-      <section class="slide dark slide--cover">
-        <div class="cover-type">
-          <h1 class="display" data-anim="fade-up" data-delay="1" contenteditable="true">DOVE DENG<br><span style="color:white">RESUME</span></h1>
-        </div>
-        <div class="cover-meta" data-anim="fade-in" data-delay="3">
-          <div class="cover-meta-col" contenteditable="true">TME 腾讯音乐<br>运营经理</div>
-          <div class="cover-meta-col" style="text-align: center" contenteditable="true">职业生涯演示</div>
-          <div class="cover-meta-col" style="text-align: right" contenteditable="true">2026 EDITION</div>
-        </div>
-      </section>
+/* ============ LAYOUT ============ */
+.wrap{max-width:980px;margin:0 auto;padding:0 28px}
+section{padding:120px 0 40px;position:relative}
+.section-title{
+  display:flex;align-items:baseline;gap:14px;margin-bottom:48px;flex-wrap:wrap;
+}
+.section-title .num{
+  font-family:'JetBrains Mono','SF Mono',monospace;font-size:13px;color:var(--fg-2);
+  letter-spacing:1.5px;
+}
+.section-title h2{
+  font-size:clamp(28px,4vw,38px);font-weight:700;letter-spacing:-.5px;color:var(--fg-0);
+}
+.section-title .line{flex:1;height:1px;background:var(--line);margin-left:8px}
 
-      <!-- SLIDE 2: STATEMENT -->
-      <section class="slide dark slide--statement">
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:5vh;">
-          <h1 class="h1" data-anim="fade-up" data-delay="0" contenteditable="true">100% 内容呈现<br>深度还原运营实战经历</h1>
-        </div>
-      </section>
+/* ============ HERO ============ */
+.hero{min-height:90vh;display:flex;align-items:center;padding:140px 0 80px;position:relative}
+.hero-grid{width:100%;max-width:820px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:5px 12px;border-radius:999px;
+  background:transparent;border:1px solid var(--line);
+  font-size:12px;color:var(--fg-1);letter-spacing:1.2px;font-family:'JetBrains Mono','SF Mono',monospace;
+  margin-bottom:28px;
+}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2.4s infinite}
+@keyframes pulse{50%{opacity:.3}}
+.hero h1{
+  font-size:clamp(44px,7.5vw,84px);font-weight:800;line-height:1.05;letter-spacing:-2px;
+  margin-bottom:20px;color:var(--fg-0);
+}
+.hero h1 .gradient{
+  color:var(--fg-0);display:inline-block;position:relative;
+  background:linear-gradient(transparent 78%,var(--accent) 78%,var(--accent) 96%,transparent 96%);
+  padding:0 4px;
+}
+.hero .role{font-size:clamp(16px,1.7vw,21px);color:var(--fg-1);margin-bottom:18px;font-weight:400;min-height:1.6em}
+.hero .role .cursor{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:middle;margin-left:2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero .tagline{font-size:15.5px;color:var(--fg-2);max-width:580px;margin-bottom:40px;line-height:1.75}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;
+  font-weight:500;font-size:14px;transition:all .2s ease;cursor:pointer;
+}
+.btn-primary{background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px var(--accent)}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--fg-0)}
+.btn-ghost:hover{border-color:var(--fg-0)}
+.hero-meta{display:flex;gap:48px;margin-top:56px;flex-wrap:wrap;padding-top:32px;border-top:1px solid var(--line)}
+.hero-meta .item .v{font-size:30px;font-weight:700;color:var(--fg-0);letter-spacing:-1px;line-height:1}
+.hero-meta .item .v .accent-mark{color:var(--accent)}
+.hero-meta .item .l{font-size:11px;color:var(--fg-2);letter-spacing:1.4px;margin-top:8px;font-family:'JetBrains Mono','SF Mono',monospace}
 
-      <!-- SLIDE 3: EDUCATION -->
-      <section class="slide light">
-        <div class="slide-chrome">
-          <span class="label" data-anim="fade-in">01 / 教育背景</span>
-          <span class="label">EDUCATION</span>
-        </div>
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:center; gap:var(--gap-lg);">
-          <div data-anim="fade-up" data-delay="1">
-            <p class="label" style="color:var(--c-fg-light-2)">2013.09 - 2015.06</p>
-            <h2 class="h2" contenteditable="true">暨南大学 (211)</h2>
-            <p class="lead" contenteditable="true">新闻与传播 / 硕士</p>
+/* ============ ABOUT ============ */
+.about{
+  display:grid;grid-template-columns:1fr 1.4fr;gap:28px;align-items:start;
+}
+.about-lead{
+  position:sticky;top:120px;
+  font-size:clamp(20px,2.4vw,26px);font-weight:500;color:var(--fg-0);line-height:1.5;letter-spacing:-.3px;
+}
+.about-lead em{font-style:normal;color:var(--accent);font-weight:600}
+.about-list{
+  display:flex;flex-direction:column;gap:0;
+  border-top:1px solid var(--line);
+}
+.about-item{
+  display:grid;grid-template-columns:36px 1fr;gap:18px;
+  padding:20px 0;border-bottom:1px solid var(--line);align-items:start;
+}
+.about-item .idx{
+  font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;color:var(--fg-2);letter-spacing:1px;padding-top:3px;
+}
+.about-item h4{font-size:15.5px;font-weight:600;margin-bottom:4px;color:var(--fg-0)}
+.about-item p{font-size:14px;color:var(--fg-1);line-height:1.7}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tag-cloud span{
+  padding:4px 10px;border-radius:6px;font-size:12px;
+  background:var(--bg-2);color:var(--fg-1);
+  font-family:'JetBrains Mono','SF Mono',monospace;
+  transition:color .2s ease,background .2s ease;
+}
+.tag-cloud span:hover{color:var(--accent);background:var(--bg-2)}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{
+  content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1px;
+  background:var(--line);
+}
+.tl-item{position:relative;padding-bottom:44px}
+.tl-item::before{
+  content:'';position:absolute;left:-27px;top:7px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg-0);border:2px solid var(--fg-1);
+}
+.tl-item.current::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent)}
+.tl-period{font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.5px;margin-bottom:6px}
+.tl-role{font-size:18px;font-weight:600;margin-bottom:4px;color:var(--fg-0)}
+.tl-company{color:var(--fg-1);font-size:13.5px;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tl-company .badge{
+  padding:1px 8px;border-radius:4px;font-size:10.5px;
+  background:var(--bg-2);border:1px solid var(--line);color:var(--fg-1);
+  font-family:'JetBrains Mono','SF Mono',monospace;letter-spacing:.5px;
+}
+.tl-desc{color:var(--fg-1);font-size:14px;line-height:1.8}
+.tl-desc ol{padding-left:18px;margin-top:6px}
+.tl-desc ol li{margin-bottom:6px}
+
+/* ============ PROJECT CARDS ============ */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.proj-card{
+  position:relative;padding:26px;border-radius:12px;
+  background:var(--surface);border:1px solid var(--surface-border);
+  transition:border-color .25s ease,transform .25s ease;
+  cursor:default;
+}
+.proj-card:hover{border-color:var(--fg-2);transform:translateY(-2px)}
+.proj-num{font-family:'JetBrains Mono','SF Mono',monospace;font-size:11.5px;color:var(--fg-2);letter-spacing:1.5px;margin-bottom:12px}
+.proj-card h4{font-size:16.5px;margin-bottom:12px;font-weight:600;line-height:1.45;color:var(--fg-0)}
+.proj-card p{font-size:13.5px;color:var(--fg-1);line-height:1.75;margin-bottom:14px}
+.proj-metrics{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.metric{
+  display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:6px;
+  background:var(--bg-2);border:1px solid var(--line);
+  font-size:11.5px;color:var(--fg-1);font-family:'JetBrains Mono','SF Mono',monospace;
+}
+.metric b{color:var(--accent);font-weight:700}
+
+/* ============ SKILLS ============ */
+.skills-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:36px}
+.skill-row{margin-bottom:20px}
+.skill-row .label{display:flex;justify-content:space-between;margin-bottom:8px;font-size:13.5px;font-weight:500;color:var(--fg-0)}
+.skill-row .label .pct{font-family:'JetBrains Mono','SF Mono',monospace;color:var(--accent);font-weight:500}
+.skill-bar{height:4px;border-radius:2px;background:var(--bg-2);overflow:hidden;position:relative}
+.skill-bar .fill{
+  height:100%;width:0;border-radius:2px;
+  background:var(--accent);
+  transition:width 1.4s cubic-bezier(.22,1,.36,1);
+}
+.honor-card{
+  padding:28px;border-radius:14px;background:var(--surface);
+  border:1px solid var(--surface-border);
+}
+.honor-card h3{margin-bottom:18px;font-size:16px;font-weight:600;color:var(--fg-0)}
+.honor-list li{
+  display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);
+  font-size:13.5px;color:var(--fg-1);list-style:none;align-items:flex-start;
+}
+.honor-list li:last-child{border-bottom:0;padding-bottom:0}
+.honor-list .ico{
+  width:28px;height:28px;border-radius:6px;flex-shrink:0;
+  background:var(--bg-2);
+  display:flex;align-items:center;justify-content:center;
+}
+.honor-list .ico svg{width:14px;height:14px;stroke:var(--fg-0)}
+.honor-list strong{color:var(--fg-0);font-weight:600}
+
+/* ============ EDU ============ */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.edu-card{
+  padding:24px;border-radius:12px;background:var(--surface);
+  border:1px solid var(--surface-border);
+  transition:border-color .25s,transform .25s;
+}
+.edu-card:hover{border-color:var(--fg-2);transform:translateY(-2px)}
+.edu-card .period{font-family:'JetBrains Mono','SF Mono',monospace;font-size:12px;color:var(--fg-2);margin-bottom:8px}
+.edu-card .school{font-size:17px;font-weight:600;margin-bottom:6px;color:var(--fg-0)}
+.edu-card .school .badge{font-size:10.5px;padding:1px 7px;border-radius:4px;background:var(--bg-2);color:var(--fg-1);margin-left:6px;font-family:'JetBrains Mono','SF Mono',monospace;vertical-align:middle;font-weight:400}
+.edu-card .major{color:var(--fg-1);font-size:13.5px}
+
+/* ============ FOOTER ============ */
+footer{
+  padding:60px 0 40px;text-align:center;color:var(--fg-2);font-size:13px;
+  border-top:1px solid var(--line);margin-top:80px;
+}
+footer .made{font-family:'JetBrains Mono','SF Mono',monospace;letter-spacing:.5px}
+
+/* ============ ANIMATIONS ============ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.delay-1{transition-delay:.08s}
+.reveal.delay-2{transition-delay:.16s}
+.reveal.delay-3{transition-delay:.24s}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .about{grid-template-columns:1fr;gap:24px}
+  .about-lead{position:static;font-size:20px}
+  .skills-grid{grid-template-columns:1fr}
+  .edu-grid{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  .wrap{padding:0 20px}
+  section{padding:90px 0 30px}
+  .nav{
+    top:auto;bottom:16px;left:16px;right:16px;transform:none;
+    justify-content:space-between;padding:6px;
+  }
+  .nav .nav-links{
+    position:fixed;left:16px;right:16px;bottom:70px;
+    flex-direction:column;align-items:stretch;gap:2px;padding:10px;
+    background:var(--surface);border:1px solid var(--surface-border);border-radius:14px;
+    transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;
+    transition:.25s ease;display:flex;
+  }
+  .nav.open .nav-links{transform:none;opacity:1;pointer-events:auto}
+  .nav .nav-links a{padding:10px 14px;text-align:center}
+  .menu-btn{display:flex}
+  .timeline{padding-left:22px}
+  .tl-item::before{left:-21px}
+  .hero-meta{gap:24px;margin-top:36px;padding-top:28px}
+  .hero-meta .item .v{font-size:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span></button>
+  <div class="nav-links">
+    <a href="#hero" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+  </button>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-eyebrow"><span class="dot"></span>AVAILABLE · 资深产运专家</div>
+      <h1>你好，我是<br><span class="gradient" id="typed">资深运营专家</span></h1>
+      <p class="role"><span id="subTyped"></span><span class="cursor"></span></p>
+      <p class="tagline">8 年互联网产运经验，深耕营收增长、活动运营、PGC 生态建设。从 0 到 1 拆解模糊地带，用数据驱动决策，让平台与用户双向奔赴。</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">查看项目案例
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#experience" class="btn btn-ghost">职业履历</a>
+      </div>
+      <div class="hero-meta">
+        <div class="item"><div class="v">8<span class="accent-mark">+</span></div><div class="l">YEARS EXP.</div></div>
+        <div class="item"><div class="v">3</div><div class="l">TOP COMPANIES</div></div>
+        <div class="item"><div class="v">10<span class="accent-mark">+</span></div><div class="l">CORE PROJECTS</div></div>
+        <div class="item"><div class="v"><span class="accent-mark">A</span></div><div class="l">PERFORMANCE</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <span class="num">01 /</span><h2>关于我</h2><span class="line"></span>
+    </div>
+    <div class="about">
+      <p class="about-lead reveal">
+        专注互联网内容 & 直播赛道，从 YY 到酷我再到腾讯音乐，完整经历营收体系从搭建到规模化的<em>全周期</em>。
+      </p>
+      <div class="about-list reveal delay-1">
+        <div class="about-item">
+          <div class="idx">01</div>
+          <div>
+            <h4>结果导向</h4>
+            <p>所有运营动作都要回到「用户价值 × 商业价值」的乘积上。</p>
           </div>
-          <div data-anim="fade-up" data-delay="2">
-            <p class="label" style="color:var(--c-fg-light-2)">2009.09 - 2013.06</p>
-            <h2 class="h2" contenteditable="true">中南大学 (985&211)</h2>
-            <p class="lead" contenteditable="true">生物医学工程 / 本科</p>
+        </div>
+        <div class="about-item">
+          <div class="idx">02</div>
+          <div>
+            <h4>数据驱动</h4>
+            <p>从假设、灰度、A/B 到归因，每一步都有数据闭环。</p>
           </div>
         </div>
-      </section>
-
-      <!-- SLIDE 4: TME EXPERIENCE 1 -->
-      <section class="slide dark slide--split">
-        <div class="slide-chrome">
-          <span class="label muted">02 / 职业经历</span>
-          <span class="label muted">TENCENT MUSIC</span>
-        </div>
-        <div class="slide-body">
-          <div data-anim="fade-up" data-delay="1">
-            <p class="label" style="color:var(--c-accent)">2026.01 - 至今</p>
-            <h2 class="h2" contenteditable="true">腾讯音乐娱乐集团</h2>
-            <p class="lead" contenteditable="true">MiSing事业部 / 韩语区运营负责人</p>
-          </div>
-          <div data-anim="fade-up" data-delay="2">
-            <ul class="bullet-list">
-              <li contenteditable="true">负责营收向功能/活动体系建设</li>
-              <li contenteditable="true">搭建完整的充值体系</li>
-              <li contenteditable="true">持续优化功能/活动模型</li>
-              <li contenteditable="true">提升核心运营指标</li>
-            </ul>
+        <div class="about-item">
+          <div class="idx">03</div>
+          <div>
+            <h4>承担模糊</h4>
+            <p>愿意冲进没人定义的灰色地带，把混乱拆成可落地的步骤。</p>
           </div>
         </div>
-        <div class="slide-foot">
-          <span class="label muted">OPERATIONS MANAGER</span>
-          <span class="label muted">PAGE 04</span>
-        </div>
-      </section>
-
-      <!-- SLIDE 5: TME EXPERIENCE 2 -->
-      <section class="slide dark slide--split">
-        <div class="slide-chrome">
-          <span class="label muted">02 / 职业经历</span>
-          <span class="label muted">TENCENT MUSIC</span>
-        </div>
-        <div class="slide-body">
-          <div data-anim="fade-up" data-delay="1">
-            <p class="label" style="color:var(--c-accent)">2024.01 - 2025.12</p>
-            <h2 class="h2" contenteditable="true">腾讯音乐娱乐集团</h2>
-            <p class="lead" contenteditable="true">Pokekara事业部 / 日语区高级歌房活动运营</p>
-          </div>
-          <div data-anim="fade-up" data-delay="2">
-            <ul class="bullet-list">
-              <li contenteditable="true">深度负责日语区高级歌房活动策略</li>
-              <li contenteditable="true">优化用户互动与留存逻辑</li>
-              <li contenteditable="true">管理跨部门资源协同</li>
-            </ul>
+        <div class="about-item">
+          <div class="idx">04</div>
+          <div>
+            <h4>团队复利</h4>
+            <p>管理 ≠ 分活，而是把每个人的成长曲线接到业务曲线上。</p>
           </div>
         </div>
-      </section>
-
-      <!-- SLIDE 6: YY EXPERIENCE -->
-      <section class="slide light slide--split">
-        <div class="slide-chrome">
-          <span class="label">03 / 职业经历</span>
-          <span class="label">YY COMPANY</span>
-        </div>
-        <div class="slide-body">
-          <div data-anim="fade-up" data-delay="1">
-            <p class="label" style="color:var(--c-fg-light-2)">2015.07 - 2023.12</p>
-            <h2 class="h2" contenteditable="true">YY公司 (欢聚集团)</h2>
-            <p class="lead" contenteditable="true">海外事业部 / 高级产品运营</p>
-          </div>
-          <div data-anim="fade-up" data-delay="2">
-            <ul class="bullet-list">
-              <li contenteditable="true">负责产品核心功能及活动策略</li>
-              <li contenteditable="true">主导内容生态体系建设</li>
-              <li contenteditable="true">跨市场运营数据监控与分析</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- SLIDE 7: PROJECT A - REVENUE -->
-      <section class="slide dark">
-        <div class="slide-chrome">
-          <span class="label muted">04 / 核心项目</span>
-          <span class="label muted">PROJECT REVENUE</span>
-        </div>
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:center; gap:var(--gap-md);">
-          <h2 class="h2" data-anim="fade-up" data-delay="1" contenteditable="true">营收模型迭代与优化</h2>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--pad-x);" data-anim="fade-up" data-delay="2">
-            <div class="stat-card">
-              <p class="label" style="color:var(--c-accent)">ACTION</p>
-              <p class="body" contenteditable="true">优化会员订阅转化流，引入阶梯式充值激励，重构海外营收逻辑。</p>
+        <div class="about-item">
+          <div class="idx">05</div>
+          <div>
+            <h4>核心标签</h4>
+            <div class="tag-cloud">
+              <span># 营收策略</span><span># 活动运营</span><span># PGC 生态</span>
+              <span># 关系链运营</span><span># 礼物体系</span><span># 充值模型</span>
+              <span># 数据洞察</span><span># 跨部门协同</span><span># 跨语区运营</span>
             </div>
-            <div class="stat-card">
-              <p class="label" style="color:var(--c-accent)">RESULT</p>
-              <p class="body" contenteditable="true">付费渗透率 (ARPPU) 获得显著提升，用户价值挖掘更趋精准。</p>
-            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <span class="num">02 /</span><h2>职业履历</h2><span class="line"></span>
+    </div>
+    <div class="timeline">
+      <div class="tl-item current reveal">
+        <div class="tl-period">2026.01 — 至今</div>
+        <div class="tl-role">韩语区运营负责人</div>
+        <div class="tl-company">
+          腾讯音乐娱乐集团 · 音娱时光 · MiSing 事业部
+          <span class="badge">CURRENT</span>
+        </div>
+        <div class="tl-desc">
+          <ol>
+            <li>负责营收向功能/活动体系建设 & 充值体系搭建，持续优化分层激励模型，开展多维度付费渗透，提升付费用户规模及整体付费规模，管理 2 人运营团队。</li>
+            <li>负责 PGC 主播招募及生态建设，招募并孵化首批核心主播，打通主播从招募到开播全链路，提升平台内容质量，打造平台内容标杆。</li>
+          </ol>
+        </div>
+      </div>
 
-      <!-- SLIDE 8: PROJECT B - SYSTEM -->
-      <section class="slide dark">
-        <div class="slide-chrome">
-          <span class="label muted">04 / 核心项目</span>
-          <span class="label muted">SYSTEM BUILDING</span>
+      <div class="tl-item reveal">
+        <div class="tl-period">2024.01 — 2025.12</div>
+        <div class="tl-role">日语区高级歌房活动运营</div>
+        <div class="tl-company">
+          腾讯音乐娱乐集团 · 音娱时光 · Pokekara 事业部
+          <span class="badge">TME</span>
         </div>
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:center; gap:var(--gap-md);">
-          <h2 class="h2" data-anim="fade-up" data-delay="1" contenteditable="true">充值与礼物系统建设</h2>
-          <ul class="bullet-list" data-anim="fade-up" data-delay="2">
-            <li contenteditable="true">从 0 到 1 搭建海外充值链路，支持多币种与本地化支付接口。</li>
-            <li contenteditable="true">设计互动礼物特效及盲盒抽奖系统，极大提升了社区互动活跃度。</li>
-            <li contenteditable="true">优化礼物系统的技术响应速度，确保大规模高并发下的系统稳定性。</li>
-          </ul>
-        </div>
-      </section>
+        <div class="tl-desc">日语区营收活动 & 关系链运营负责人，主导 6 大充值模板搭建、礼物体系扩容、PGC 主播孵化等关键专项，多项核心指标创新高。</div>
+      </div>
 
-      <!-- SLIDE 9: PROJECT C - PGC -->
-      <section class="slide light">
-        <div class="slide-chrome">
-          <span class="label">04 / 核心项目</span>
-          <span class="label">CONTENT & PGC</span>
+      <div class="tl-item reveal">
+        <div class="tl-period">2017.07 — 2023.12</div>
+        <div class="tl-role">营收产品运营 / 运营组组长</div>
+        <div class="tl-company">
+          腾讯音乐娱乐集团 · 酷我直播业务部
+          <span class="badge">6.5 YRS</span>
         </div>
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:center; gap:var(--gap-md);">
-          <h2 class="h2" data-anim="fade-up" data-delay="1" contenteditable="true">PGC 主播招募与内容提升</h2>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--pad-x);" data-anim="fade-up" data-delay="2">
-            <div>
-              <p class="label" style="color:var(--c-fg-light-2)">内容运营</p>
-              <p class="body" contenteditable="true">招募高素质 PGC 主播，建立严谨的内容审核与分发机制。</p>
-            </div>
-            <div>
-              <p class="label" style="color:var(--c-fg-light-2)">质量监控</p>
-              <p class="body" contenteditable="true">建立数据反馈模型，通过 A/B 测试持续迭代推荐算法。</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        <div class="tl-desc">统筹规划全年活动策划、营收功能迭代、主播扶持及产品功能搭建。管理 4 人左右团队，主导首个年度盛典赛事，PK 玩法矩阵 & 中小主播扶持体系。</div>
+      </div>
 
-      <!-- SLIDE 10: SKILLS -->
-      <section class="slide dark">
-        <div class="slide-chrome">
-          <span class="label muted">05 / 专业技能</span>
-          <span class="label muted">SKILLSET</span>
-        </div>
-        <div class="slide-body" style="display:flex; flex-direction:column; justify-content:center;">
-          <div class="stats-grid" data-anim="fade-up" data-delay="1">
-            <div class="stat-card">
-              <div class="stat-value">AXURE</div>
-              <div class="stat-label" contenteditable="true">原型设计与文档撰写</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">SQL</div>
-              <div class="stat-label" contenteditable="true">深度数据提取与分析</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-value">PR/PS</div>
-              <div class="stat-label" contenteditable="true">视觉设计与多媒体处理</div>
-            </div>
-          </div>
-          <div class="stats-grid" style="margin-top:var(--gap-lg);" data-anim="fade-up" data-delay="2">
-            <div class="stat-card">
-              <div class="stat-value">OFFICE</div>
-              <div class="stat-label" contenteditable="true">专家级办公应用能力</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="tl-item reveal">
+        <div class="tl-period">2017.01 — 2017.06</div>
+        <div class="tl-role">营收活动运营</div>
+        <div class="tl-company">欢聚时代 (YY) · 营收部</div>
+        <div class="tl-desc">负责约会模板营收活动策划与运营，主导游戏厂商联运合作。</div>
+      </div>
 
-      <!-- SLIDE 11: END -->
-      <section class="slide light slide--cover" style="justify-content:center; align-items:center; text-align:center;">
-        <h1 class="display" data-anim="fade-up" data-delay="0" contenteditable="true">THANK YOU</h1>
-        <div style="margin-top:var(--gap-lg);" data-anim="fade-in" data-delay="2">
-          <p class="lead" contenteditable="true">Dove Deng | dovedeng608@gmail.com</p>
-          <p class="label" style="color:var(--c-fg-light-2); margin-top:10px;" contenteditable="true">期待与您交流</p>
-        </div>
-      </section>
+      <div class="tl-item reveal">
+        <div class="tl-period">2015.07 — 2016.12</div>
+        <div class="tl-role">活动制片</div>
+        <div class="tl-company">欢聚时代 (YY) · 内容部</div>
+        <div class="tl-desc">负责平台 S 级品牌项目内容制作和直播运营，运营 10+ 场公司年度 S 级项目「YY 明星玩唱会」(王心凌等)，场均 ACU 100w+。</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <span class="num">03 /</span><h2>项目经验</h2><span class="line"></span>
     </div>
 
-    <script>
-      (function () {
-        "use strict";
-        const deck = document.getElementById("deck");
-        const slides = Array.from(document.querySelectorAll(".slide"));
-        const dotsEl = document.getElementById("nav-dots");
-        const total = slides.length;
-        let current = 0;
-        let animating = false;
+    <h3 class="reveal" style="font-size:18px;margin:0 0 22px;color:var(--fg-1);font-weight:600;">▎ TME · Pokekara / MiSing 时期</h3>
+    <div class="proj-grid" style="margin-bottom:48px">
+      <article class="proj-card reveal">
+        <div class="proj-num">PROJ · 01</div>
+        <h4>关系链运营创新 — 基于关系付费专项</h4>
+        <p>助力平台由工具型向社交型转变，深度挖掘日区/韩区用户关系特征，多角度强化付费基础和付费深度。CP 向通过关系升级营造唯一性和稀缺性；通过「师徒」活动带动腰部房主活跃。</p>
+        <div class="proj-metrics">
+          <span class="metric">场均关系渗透率<b>+30%</b></span>
+          <span class="metric">基于关系付费<b>+286%</b></span>
+          <span class="metric">腰部房主进房 UV<b>+96.3%</b></span>
+        </div>
+      </article>
 
-        function init() {
-          deck.style.width = total + "00vw";
-          slides.forEach(function (_, i) {
-            const btn = document.createElement("button");
-            btn.className = "nav-dot";
-            btn.addEventListener("click", function () { goTo(i); });
-            dotsEl.appendChild(btn);
-          });
-          goTo(0, true);
+      <article class="proj-card reveal delay-1">
+        <div class="proj-num">PROJ · 02</div>
+        <h4>概率向活动 — 小游戏专项</h4>
+        <p>为扩大平台概率型玩法的参与人数，搭建从试玩到免费玩的多层次渗透活动，不断扩大小游戏的用户覆盖范围。</p>
+        <div class="proj-metrics">
+          <span class="metric">付费转化率<b>+20%+</b></span>
+          <span class="metric">日均参与人数<b>+77%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-2">
+        <div class="proj-num">PROJ · 03</div>
+        <h4>活跃向活动 — 引流专项</h4>
+        <p>以引流为目标，通过打怪兽提供集体参与口径，优化流量入口和承接人群分布，全面提升歌房进房流量与活跃指标。</p>
+        <div class="proj-metrics">
+          <span class="metric">歌房 DAU 渗透<b>+28.6%</b></span>
+          <span class="metric">进房 UV<b>+42.5%</b></span>
+          <span class="metric">送礼/上麦 UV<b>+24.1%~59.8%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-num">PROJ · 04</div>
+        <h4>充值专项 · 6 大模板搭建</h4>
+        <p>切分用户群体，聚焦各部分人群的充值激励点和前置消费链路，持续迭代优化充值体系。完成 6 个充值活动模板搭建，充值人数与金币数屡创新高。</p>
+        <div class="proj-metrics">
+          <span class="metric">日均充值额<b>+56.7%</b></span>
+          <span class="metric">日均充值人数<b>+26.7%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-1">
+        <div class="proj-num">PROJ · 05</div>
+        <h4>礼物体系优化与扩容专项</h4>
+        <p>提升礼物丰富度并优化礼物价值档位分布。推动上线包含幸运礼物在内的多项礼物功能，建立 2:1:1 的低中高价位分布模型。</p>
+        <div class="proj-metrics">
+          <span class="metric">常驻礼物库<b>+420%</b></span>
+          <span class="metric">送礼人数<b>+20.89%</b></span>
+          <span class="metric">新增礼物消耗占比<b>91.2%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-2">
+        <div class="proj-num">PROJ · 06</div>
+        <h4>PGC 主播专项 · 内容标杆</h4>
+        <p>跑通 PGC 主播招募、线上签约、培训、开播、筛选全流程；设定主播薪资构成及合同细节，建立扶持通道，优化开播体验功能。</p>
+        <div class="proj-metrics">
+          <span class="metric">关注率<b>1.2x</b>平台</span>
+          <span class="metric">送礼 UV<b>4.7x</b>平台</span>
+          <span class="metric">60s 停留<b>3.5x</b>平台</span>
+          <span class="metric">房间流水<b>1.7x</b></span>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="reveal" style="font-size:18px;margin:0 0 22px;color:var(--fg-1);font-weight:600;">▎ 酷我直播时期</h3>
+    <div class="proj-grid" style="margin-bottom:48px">
+      <article class="proj-card reveal">
+        <div class="proj-num">PROJ · 07</div>
+        <h4>年度盛典 & 营收活动专项</h4>
+        <p>主导推出首个年度盛典赛事，通过合理赛制安排及充值联动，实现月流水跃升；激发主播和家族 UGC 内容展示能力，搭建家族、主播内容直播支持功能。</p>
+        <div class="proj-metrics">
+          <span class="metric">上线月流水<b>+100%+</b></span>
+          <span class="metric">全年活动流水<b>+128%</b></span>
+          <span class="metric">官方频道流水<b>+418%</b></span>
+          <span class="metric">家族活动流水<b>+63%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-1">
+        <div class="proj-num">PROJ · 08</div>
+        <h4>PK 功能矩阵迭代专项</h4>
+        <p>持续优化 PK 功能迭代，吸收剧情类游戏付费特点，结合用户行为趋势推出荣耀 PK、战斗天使、团战 PK 等玩法矩阵，丰富营收产品工具箱。</p>
+        <div class="proj-metrics">
+          <span class="metric">日均付费用户<b>+122%</b></span>
+          <span class="metric">日均流水<b>+230%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-2">
+        <div class="proj-num">PROJ · 09</div>
+        <h4>主播扶持专项 · 中小 & 游戏主播</h4>
+        <p>《新人王》活动 + 师徒榜单及流量玩法帮助机构提升新主播开播效率；制定机构引入扶持策略与赛事活动，持续提高站内游戏主播规模及粘性。</p>
+        <div class="proj-metrics">
+          <span class="metric">新主播开播<b>+22.5%</b></span>
+          <span class="metric">7 日留存<b>+10.8%</b></span>
+          <span class="metric">大盘开播数<b>+8%</b></span>
+          <span class="metric">游戏主播流水<b>+5.8%</b></span>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="reveal" style="font-size:18px;margin:0 0 22px;color:var(--fg-1);font-weight:600;">▎ YY 时期</h3>
+    <div class="proj-grid">
+      <article class="proj-card reveal">
+        <div class="proj-num">PROJ · 10</div>
+        <h4>营收活动 · 鲸鱼大 R 分层运营</h4>
+        <p>提升营收部约会板块增值业务流水与日活，划分鲸鱼大 R + 中小 R 的分层次运营策略。</p>
+        <div class="proj-metrics">
+          <span class="metric">中小 R 参与<b>+9.1%</b></span>
+          <span class="metric">鲸鱼大 R 消耗<b>+122%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-1">
+        <div class="proj-num">PROJ · 11</div>
+        <h4>YY 明星玩唱会 · S 级品牌项目</h4>
+        <p>担任平台 S 级品牌项目内容制片，成功运营 10+ 场公司年度 S 级项目「YY 明星玩唱会」(王心凌等)。</p>
+        <div class="proj-metrics">
+          <span class="metric">场均 ACU<b>100w+</b></span>
+          <span class="metric">观看人数<b>+8.8%</b></span>
+          <span class="metric">停留时长<b>+5.7%</b></span>
+        </div>
+      </article>
+
+      <article class="proj-card reveal delay-2">
+        <div class="proj-num">PROJ · 12</div>
+        <h4>情感咨询频道 · 0 到 1 搭建</h4>
+        <p>从 0 到 1 搭建全新内容频道，负责主播池建立、内容策划与流量引入，举办乐嘉、李银河 YY 直播首秀。</p>
+        <div class="proj-metrics">
+          <span class="metric">电台主持人入驻<b>40+</b></span>
+          <span class="metric">人均停留<b>+109%</b></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <span class="num">04 /</span><h2>专业技能</h2><span class="line"></span>
+    </div>
+    <div class="skills-grid">
+      <div class="reveal">
+        <div class="skill-row"><div class="label"><span>营收策略 & 活动设计</span><span class="pct" data-pct="95">0%</span></div><div class="skill-bar"><div class="fill" data-pct="95"></div></div></div>
+        <div class="skill-row"><div class="label"><span>数据洞察 & SQL 分析</span><span class="pct" data-pct="88">0%</span></div><div class="skill-bar"><div class="fill" data-pct="88"></div></div></div>
+        <div class="skill-row"><div class="label"><span>团队 & 跨部门协同</span><span class="pct" data-pct="92">0%</span></div><div class="skill-bar"><div class="fill" data-pct="92"></div></div></div>
+        <div class="skill-row"><div class="label"><span>PGC 内容生态搭建</span><span class="pct" data-pct="90">0%</span></div><div class="skill-bar"><div class="fill" data-pct="90"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Axure / 产品需求</span><span class="pct" data-pct="85">0%</span></div><div class="skill-bar"><div class="fill" data-pct="85"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Photoshop / Premiere</span><span class="pct" data-pct="78">0%</span></div><div class="skill-bar"><div class="fill" data-pct="78"></div></div></div>
+        <div class="skill-row"><div class="label"><span>Office 全家桶</span><span class="pct" data-pct="95">0%</span></div><div class="skill-bar"><div class="fill" data-pct="95"></div></div></div>
+      </div>
+      <div class="honor-card reveal delay-1">
+        <h3>荣誉与评价</h3>
+        <ul class="honor-list">
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg></div>
+            <div><strong>YY 优秀新人员工</strong><br><span style="color:var(--fg-2);font-size:13px">入职首年获评，快速建立业务影响力</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M9 14l-3 8 6-4 6 4-3-8"/></svg></div>
+            <div><strong>TME 双 S 员工</strong><br><span style="color:var(--fg-2);font-size:13px">连续两个年度获评最高级别员工荣誉</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
+            <div><strong>绩效考评 A · 同事环评 A</strong><br><span style="color:var(--fg-2);font-size:13px">业务结果与协作口碑双高分</span></div>
+          </li>
+          <li>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><strong>团队管理 & 外包协同</strong><br><span style="color:var(--fg-2);font-size:13px">业务团队 + 外包团队管理经验，跨部门合作经验丰富</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-title reveal">
+      <span class="num">05 /</span><h2>教育背景</h2><span class="line"></span>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="period">2013.09 — 2015.06</div>
+        <div class="school">暨南大学 <span class="badge">211</span></div>
+        <div class="major">新闻与传播 · 硕士</div>
+      </div>
+      <div class="edu-card reveal delay-1">
+        <div class="period">2009.09 — 2013.06</div>
+        <div class="school">中南大学 <span class="badge">985</span><span class="badge">211</span></div>
+        <div class="major">生物医学工程 · 本科</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="made">CRAFTED WITH CODE · © 2026</p>
+    <p style="margin-top:8px;font-size:12px;">本简历单文件部署 · 无外部依赖 · GitHub Pages Ready</p>
+  </div>
+</footer>
+</main>
+
+<script>
+(() => {
+  /* ============ THEME ============ */
+  const root = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  /* ============ MOBILE MENU ============ */
+  const nav = document.getElementById('nav');
+  const menuBtn = document.getElementById('menuBtn');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('.nav-links a').forEach(a =>
+      a.addEventListener('click', () => nav.classList.remove('open'))
+    );
+  }
+
+  /* ============ TYPEWRITER ============ */
+  const typeText = (el, text, speed = 90, done) => {
+    let i = 0;
+    el.textContent = '';
+    const tick = () => {
+      if (i <= text.length) {
+        el.textContent = text.slice(0, i++);
+        setTimeout(tick, speed);
+      } else done && done();
+    };
+    tick();
+  };
+  const titleEl = document.getElementById('typed');
+  const subEl = document.getElementById('subTyped');
+  const subWords = ['资深运营专家 / 产运负责人', '营收增长操盘手', '内容生态架构师', 'Operation Strategist'];
+  typeText(titleEl, '资深运营专家', 110, () => {
+    let idx = 0;
+    const cycle = () => {
+      typeText(subEl, subWords[idx], 60, () => {
+        setTimeout(() => {
+          const word = subWords[idx];
+          let j = word.length;
+          const erase = () => {
+            if (j >= 0) { subEl.textContent = word.slice(0, j--); setTimeout(erase, 30); }
+            else { idx = (idx + 1) % subWords.length; cycle(); }
+          };
+          erase();
+        }, 1800);
+      });
+    };
+    cycle();
+  });
+
+  /* ============ INTERSECTION OBSERVER ============ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        if (e.target.classList.contains('skill-bar') || e.target.querySelector?.('.fill')) {
+          const fills = e.target.querySelectorAll('.fill');
+          fills.forEach(f => { f.style.width = f.dataset.pct + '%'; });
         }
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-        function goTo(index, instant) {
-          index = Math.max(0, Math.min(total - 1, index));
-          if (index === current && !instant) return;
-          animating = true;
-          slides[current].classList.remove("is-active");
-          if (instant) {
-            deck.style.transition = "none";
-            deck.style.transform = "translateX(-" + index + "00vw)";
-            void deck.offsetWidth;
-            deck.style.transition = "";
-          } else {
-            deck.style.transform = "translateX(-" + index + "00vw)";
-          }
-          current = index;
-          slides[current].classList.add("is-active");
-          Array.from(dotsEl.children).forEach(function (dot, i) {
-            dot.classList.toggle("is-active", i === current);
-          });
-          setTimeout(function () { animating = false; }, 750);
-        }
+  /* ============ SKILL BAR FILL & PCT COUNT ============ */
+  const skillIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const bar = e.target.querySelector('.fill');
+        const pctEl = e.target.parentElement.querySelector('.pct');
+        const target = +bar.dataset.pct;
+        bar.style.width = target + '%';
+        let cur = 0;
+        const dur = 1400, start = performance.now();
+        const tick = (t) => {
+          const p = Math.min(1, (t - start) / dur);
+          const eased = 1 - Math.pow(1 - p, 3);
+          pctEl.textContent = Math.round(eased * target) + '%';
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        skillIo.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.skill-bar').forEach(el => skillIo.observe(el));
 
-        document.addEventListener("keydown", function (e) {
-          if (animating) return;
-          if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " ") {
-            e.preventDefault(); goTo(current + 1);
-          } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
-            e.preventDefault(); goTo(current - 1);
-          }
-        });
+  /* ============ NAV ACTIVE LINK ============ */
+  const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'education']
+    .map(id => document.getElementById(id));
+  const navLinks = nav.querySelectorAll('.nav-links a');
+  const navIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active',
+          a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => s && navIo.observe(s));
 
-        init();
-      })();
-    </script>
-  </body>
+  /* (3D tilt and particle background removed for minimalist style) */
+})();
+</script>
+</body>
 </html>
